@@ -1,0 +1,17 @@
+<%- include("partials/header") -%>
+<h1>Home</h1>
+<p><%= homeStartingContentVari %></p>
+    <%postsVari.forEach(function(post){%>
+
+        <div class="card mb-5">
+            <div class="card-header">
+                <h5 class="card-title"><%= post.title %></h5>
+            </div>
+            <div class="card-body">
+    
+              <p class="card-text"><%=post.post.substr(0,100) + '...' %></p>
+              <a href="/posts/<%=post.title%>" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
+    <%})%>
+<%- include("partials/footer") -%>
